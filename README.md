@@ -29,13 +29,13 @@ The description of the structure and extra information about each _resource_ sto
 
 #### Actions
 
-| Field       | Data Type | Metadata                                                                                         |
-| ----------- | --------- | ------------------------------------------------------------------------------------------------ |
-| id          | number    | no need to provide it when creating posts, the database will automatically generate it           |
-| project_id  | number    | required, must be the id of an existing project                                                  |
-| description | string    | up to 128 characters long, required                                                              |
-| notes       | string    | no size limit, required. Used to record additional notes or requirements to complete the action  |
-| completed   | boolean   | used to indicate if the action has been completed, not required                                  |
+| Field       | Data Type | Metadata                                                                                        |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------- |
+| id          | number    | no need to provide it when creating posts, the database will automatically generate it          |
+| project_id  | number    | required, must be the id of an existing project                                                 |
+| description | string    | up to 128 characters long, required                                                             |
+| notes       | string    | no size limit, required. Used to record additional notes or requirements to complete the action |
+| completed   | boolean   | used to indicate if the action has been completed, not required                                 |
 
 ### Database Persistence Helpers
 
@@ -66,7 +66,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 ### Project Structure and Dependencies
 
-- [ ] Do not move or rename existing files or folders.
+- [x] Do not move or rename existing files or folders.
 - [ ] All necessary libraries are already installed in the project.
 
 ### Task 1: Project Set Up
@@ -92,6 +92,7 @@ A _"test"_ script already exists you can use to run tests against your code.
 #### Build an API
 
 - [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
+
   - `[GET] /api/actions` sends an array of actions (or an empty array) as the body of the _response_.
   - `[GET] /api/actions/:id` sends an action with the given `id` as the body of the _response_.
   - `[POST] /api/actions` sends the newly created action as the body of the _response_.
@@ -99,6 +100,7 @@ A _"test"_ script already exists you can use to run tests against your code.
   - `[DELETE] /api/actions` sends no _response_ body.
 
 - [ ] Inside `api/projects/projects-router.js` build endpoints for performing CRUD operations on _projects_:
+
   - `[GET] /api/projects` sends an array of projects (or an empty array) as the body of the response.
   - `[GET] /api/projects/:id` sends a project with the given `id` as the body of the _response_.
   - `[POST] /api/projects` sends the newly created project as the body of the _response_.
@@ -106,6 +108,7 @@ A _"test"_ script already exists you can use to run tests against your code.
   - `[DELETE] /api/projects` sends no _response_ body.
 
 - [ ] Inside `api/projects/projects-router.js` add an endpoint for retrieving the list of actions for a project:
+
   - `[GET] /api/projects/:id/actions` sends an array of actions (or an empty array) as the body of the response.
 
 - [ ] When adding an action, make sure the `project_id` provided belongs to an existing `project`.
